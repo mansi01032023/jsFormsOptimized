@@ -4,13 +4,9 @@ function checkWeight() {
   result.style.color = "red";
   let age = document.getElementById("age").value;
   let weight = document.getElementById("weight").value;
-  if (age == "" || weight == "") {
+  if (age == "" || weight == "" || age > 100 || age < 0 || weight > 0 || weight > 200) {
     result.innerHTML = "Invalid input";
-  } else if (age > 100 || age < 0) {
-    result.innerHTML = "Invalid input";
-  } else if (weight > 200 || weight < 0) {
-    result.innerHTML = "Invalid input";
-  } else {
+  }else{
     bmiCheck(5, 7, 15, 20, age, weight);
     bmiCheck(8, 10, 21, 25, age, weight);
     bmiCheck(11, 15, 26, 30, age, weight);
